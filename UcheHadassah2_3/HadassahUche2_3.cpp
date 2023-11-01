@@ -13,13 +13,18 @@ using namespace std;
 int SumDigits(long n);//Function Proyotype
 int main()
 {
-	int number;
+	cout << "The sum of 1234 is " << SumDigits(1234);
 	
 	return 0;
 }
 int SumDigits(long n)
 {
 	int sum = 0;
-
+	while (n % 10 != 0)
+	{
+		sum += n % 10;
+		n = n / 10;
+	}
+	sum += n;
 	return sum;
 }
